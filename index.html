@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body class="body ">
+    <div class ="box">
+        <h1>Title</h1>
+    </div>
+
+         <label for="fahrenheit">Fahrenheit temperature</label><br>
+        <input type="text" id="fahrenheit"><br><br>
+        <button onclick="toCelsius()">Convert To Celsius</button> <br><br>
+        <p id = "result1"> </p>
+        <label for="celsius">Celsius temperature</label><br><br>
+        <input type="text" id="celsius"><br><br>
+        
+        <button onclick="toFahrenheit()">Convert To Fahrenheit</button>
+        <p id="result2"></p>
+    
+    
+</body>
+<script>
+    function toFahrenheit() {
+    
+    let cel = document.getElementById("celsius").value;
+        if (cel !== "") {
+        let f =  (cel * 9 / 5) + 32;
+        document.getElementById("result2").innerHTML = f.toFixed(2);
+        }
+    }
+    
+     function toCelsius() {
+        let fahr = document.getElementById("fahrenheit").value;
+        if (fahr !== "") {
+        let c = (fahr - 32) * (5/9);
+        document.getElementById("result1").innerHTML = c.toFixed(2);
+        }
+    }
+    
+</script>
+</html>
+
