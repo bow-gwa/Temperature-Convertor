@@ -1,1 +1,1 @@
-This is a temperature convertor
+This is a temperature convertor.
